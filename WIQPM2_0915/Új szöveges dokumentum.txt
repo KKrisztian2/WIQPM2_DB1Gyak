@@ -1,0 +1,95 @@
+%--  8:40 AM 3/02/20 --%
+%--  8:07 AM 10/08/20 --%
+%--  8:43 AM 9/07/21 --%
+intro
+x=[1,2,3]
+P=[1 2; 3 4; 5 6]
+P'
+Y= 4 5 6
+Y=[4 5 6]
+x' * Y
+x .* Y
+sum(ans
+sum(ans)
+A
+P
+sum(P)
+sum(sum(P))
+B=rand(3,2)
+C=rand(2)
+help
+help rand
+Z=rand(3,3)
+diag(Z)
+sum(diag(Z))
+diag(diag(Z))
+tril(Z)
+triu(Z)
+tric(Z, 1)
+tril(Z, 1)
+triu(Z, 1)
+inv(Z)
+zeros(3, 2)
+ones(3,3)
+eye(4)
+Z
+Z1=Z(1:2)
+Z1=Z(1:2, 1:2)
+Z2=Z(2:3, 2:3)
+Z3=Z(2,:)
+sum(1:100)
+sum(1:2:100)
+sum(2:2:100)
+plot(x, Y)
+plot(x, Y, 'r')
+plot(x, Y, 'x')
+help plot
+X=[0:0.01:3];
+Y=sin(X);
+plot(X, Y)
+X=[-3:0.01:3];
+plot(X, Y)
+Y=sin(X);
+plot(X, Y)
+X=[0:0.01:3];
+Y=sin(100*PI + X) - sin(X);
+Y=sin(100*Pi + X) - sin(X);
+Y=sin(100*pi + X) - sin(X);
+plot(X, Y)
+eps
+%--  8:59 AM 9/14/21 --%
+4/5
+format long
+4/5
+long e
+format racional
+format rational
+4/5
+format long e
+4/5
+format rational
+help format
+4/5
+format short
+format long e
+eps
+real min
+realmin
+realmax
+%-- 11:17 AM 9/15/21 --%
+%--  9:08 AM 9/21/21 --%
+m=imput('Add meg a szamot')
+m=input('Add meg a szamot')
+disp('Szoveg')
+tick
+tik
+tictoc
+tic toc
+tick tock
+tik tok
+tic
+toc
+tic
+toc
+x=[1,2,3]
+help sprintf
