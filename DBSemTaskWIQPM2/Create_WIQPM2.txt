@@ -1,0 +1,60 @@
+CREATE TABLE Csapatok(
+    Nev VARCHAR(100) PRIMARY KEY,
+    Org_nemzetisege VARCHAR(100),
+    Rang INT,
+    Regio VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE Jatekosok(
+    Azonosito INT PRIMARY KEY,
+    Nev VARCHAR(100),
+    Nemzetiseg VARCHAR(100),
+    Jelenlegi_rang INT,
+    Legmagasabb_rang INT,
+    Aktiv BIT,
+    Pozicio VARCHAR(7),
+    Karrier_kezdete INT,
+    Eletkor INT,
+    KDA FLOAT,
+    CS_min FLOAT,
+    KP FLOAT,
+    Win INT,
+    Lose INT,
+    Winrate FLOAT AS ((Win)/Win+Lose),
+    Best_champ VARCHAR(50),
+    Damage_min FLOAT,
+    Vision_min FLOAT,
+    Csapat VARCHAR(100) REFERENCES Csapatok(Nev),
+    CHECK (Legmagasabb_rang>=Jelenlegi_rang)
+);
+
+CREATE TABLE Esemenyek(
+    Nev VARCHAR(100) PRIMARY KEY,
+    Ev DATE,
+    Nyeremeny INT,
+    Orszag VARCHAR(100),
+    Varos VARCHAR(100),
+    Hely VARCHAR(100),
+    Csapat VARCHAR(100) REFERENCES Csapatok(Nev)
+);
+
+CREATE TABLE Szponzorok(
+    Nev VARCHAR(100) PRIMARY KEY,
+    Fajta VARCHAR(100),
+    Orszag VARCHAR(100),
+    Tulajdonos VARCHAR(100)
+);
+
+CREATE TABLE Szponzoral(
+    Szponzor VARCHAR(100) REFERENCES Szponzorok(Nev),
+    Csapat VARCHAR(100) REFERENCES Csapatok(Nev),
+    Miota DATE,
+    PRIMARY KEY(Szponzor, Csapat)
+);
+
+CREATE TABLE Edzok(
+    Edzo VARCHAR(100),
+    Csapat VARCHAR(100) REFERENCES Csapatok(Nev),
+    PRIMARY KEY(Edzo, Csapat)
+);
+
