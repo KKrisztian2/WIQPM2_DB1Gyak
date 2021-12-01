@@ -1,0 +1,6 @@
+Jatekosok[Azonosito: int, Nev: varchar(100), Nemzetiseg(100), Jelenlegi_rang: int, Legmagasabb_rang: int, Aktiv: bit, Pozicio: varchar(7), Karrier_kezdete: int, Eletkor: int, KDA: float, CS/min: float, KP: float, Win: int, Lose: int, Winrate: float, Best_champ: varchar(50), Damage/min: float, Vision/min: float, Csapat: varchar(100)]
+Csapatok[Nev: varchar(100), Org_nemzetisege: varchar(100), Rang: int, Regio: varchar(5)]
+Események[Nev: varchar(100), Ev: date, Nyeremeny: int, Orszag: varchar(100), Varos: varchar(100), Hely: varchar(100), Csapat: varchar(100)]
+Szponzorok[Nev: varchar(100), Fajta: varchar(100), Orszag: varchar(100), Tulajdonos: varchar(100)]
+Szponzoral[Szponzor: varchar(100), Csapat: varchar(100), Miota: date]
+Edzok[Edzo: varchar(100), Csapat: varchar(100)]
